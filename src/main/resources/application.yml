@@ -1,3 +1,9 @@
 elasticsearch:
   port: 9200
   host: localhost
+  scheme: http
+  connectionTimeOut: 1000
+  socketTimeOut: 30000
+  connectionRequestTimeOut: 500
+  maxConnectNum: 100
+  maxConnectPerRoute: 100

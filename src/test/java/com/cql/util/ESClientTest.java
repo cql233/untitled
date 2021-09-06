@@ -12,10 +12,11 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 @SpringBootTest(classes = ElasticsearchConfig.class)
 @EnableConfigurationProperties
 public class ESClientTest {
+    @Autowired
+    RestHighLevelClient restHighLevelClient;
     @Test
     public void printClient(){
-        ApplicationContext  context= new AnnotationConfigApplicationContext(ElasticsearchConfig.class);
-        RestHighLevelClient client=context.getBean("restHighLevelClient",RestHighLevelClient.class);
-        System.out.println(client);
+
+        System.out.println(restHighLevelClient);
     }
 }
